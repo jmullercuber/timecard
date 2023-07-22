@@ -1,10 +1,32 @@
-# Getting Started with Create React App
+# My Easy Timecard App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I do not always work continuous hours.
+Maybe I'll dedicate some hours in the morning,
+pause and pivot to errands or a long lunch, and then resume in the evening.
 
-## Available Scripts
+Nonetheless, it's valuable to accurately document time spent on a project for
+billing, reporting, or optimization.
 
-In the project directory, you can run:
+This app aims to provide a low-overhead interface, allowing me to quickly and accurately track time by sending starts and stops signaling. Similar to a [punch clock machine](https://en.wikipedia.org/wiki/Time_clock).
+Additionally, if I forget to "clock in" or "clock out", I can edit records appropriately.
+
+No login/network connection required.
+
+## TODOs
+
+- deploy to public website
+- offline (use Cache API)
+- stopwatch display (count how long since last clocked)
+- make it look pretty
+- delete/edit time segment history
+- edit current time segment's start
+- associate project/activity with time segment
+
+## Usage
+
+TODO: go to hosted website to use app
+
+## Development
 
 ### `npm start`
 

@@ -1,7 +1,10 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { ToggleButton } from "./components/ToggleButton";
+import { ResetButton } from "./components/ResetButton";
+import { TimecardProvider } from "./contexts/Timecard";
+import { TimeSegmentHistory } from "./components/TimeSegmentHistory";
 function App() {
   return (
     <div className="App">
@@ -18,6 +21,11 @@ function App() {
         >
           Learn React
         </a>
+        <TimecardProvider>
+          <ToggleButton />
+          <ResetButton />
+          <TimeSegmentHistory />
+        </TimecardProvider>
       </header>
     </div>
   );
