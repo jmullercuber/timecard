@@ -15,7 +15,6 @@ No login/network connection required.
 ## TODOs
 
 - offline (use Cache API)
-- stopwatch display (count how long since last clocked)
 - make it look pretty
 - delete/edit time segment history
 - edit current time segment's start
