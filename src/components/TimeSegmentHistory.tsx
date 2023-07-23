@@ -7,8 +7,11 @@ const Segment = (block: TimeBlock, idx: number) => {
   const end = formatDate(block.endTime, { showSeconds: false });
   const duration = formatDuration(block.durationMilliSecs);
 
+  const { deleteAtIndex } = useTimecardContext();
+
   return (
     <div key={idx}>
+      <span onClick={() => deleteAtIndex(idx)}>x </span>
       <span>
         {start}-{end};
       </span>

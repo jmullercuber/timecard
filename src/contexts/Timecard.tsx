@@ -17,6 +17,7 @@ interface TimecardOutputs extends TimecardState {
   isCounting: boolean;
   toggleCounting: () => void;
   clear: () => void;
+  deleteAtIndex: (index: number) => void;
 }
 
 const TimecardContext = createContext<TimecardOutputs | undefined>(undefined);
@@ -91,11 +92,19 @@ const TimecardProvider = ({ children }: PropsWithChildren) => {
     setTimecardState(TimecardStorage.default);
   };
 
+  const deleteAtIndex = (deleteIndex: number) => {
+    setTimecardState({
+      ...timecardState,
+      history: timecardState.history.filter((_, idx) => idx !== deleteIndex),
+    });
+  };
+
   const value = {
     ...timecardState,
     isCounting: timecardState.currentBlockStart !== null,
     toggleCounting,
     clear,
+    deleteAtIndex,
   };
 
   return (

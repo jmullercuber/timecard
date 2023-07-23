@@ -16,7 +16,7 @@ No login/network connection required.
 
 - offline (use Cache API)
 - make it look pretty
-- delete/edit time segment history
+- edit time segment history
 - edit current time segment's start
 - associate project/activity with time segment
 
