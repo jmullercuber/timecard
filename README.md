@@ -14,7 +14,6 @@ No login/network connection required.
 
 ## TODOs
 
-- deploy to public website
 - offline (use Cache API)
 - stopwatch display (count how long since last clocked)
 - make it look pretty
@@ -24,14 +23,14 @@ No login/network connection required.
 
 ## Usage
 
-TODO: go to hosted website to use app
+Visit the app at https://jmullercuber.github.io/timecard/
 
 ## Development
 
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open http://localhost:3000/timecard to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
