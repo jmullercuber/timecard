@@ -67,7 +67,7 @@ const formatDate = (value: Date, options: formatDateOptions = {}) => {
   }
 
   // Otherwise, include date in output too
-  const dateStr = `${value.getMonth()}/${value.getDate()}`;
+  const dateStr = `${value.getMonth() + 1}/${value.getDate()}`;
   return `${dateStr} ${timeStr}`;
 };
 

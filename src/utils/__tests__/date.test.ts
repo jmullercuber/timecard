@@ -1,4 +1,4 @@
-import { hoursToPeriods } from "../dateFormatter";
+import { hoursToPeriods, formatDate } from "../dateFormatter";
 
 test.each([
   { rawHour: 0, expected_hour: 12, expected_period: "am" },
@@ -35,3 +35,15 @@ test.each([
     });
   }
 );
+
+test("formatDate returns expected for day in past", () => {
+  jest.setSystemTime(new Date("2023-08-03T23:52:59.477Z"));
+  expect(formatDate(new Date("2023-08-02T22:08:52.759Z"))).toBe(
+    "8/2 04:08:52 pm"
+  );
+});
+
+test("formatDate returns expected for current day", () => {
+  jest.setSystemTime(new Date("2023-08-03T23:52:59.477Z"));
+  expect(formatDate(new Date("2023-08-03T22:08:52.759Z"))).toBe("04:08:52 pm");
+});
